@@ -30,4 +30,17 @@ public class ArticleHandler extends BaseHandler<ArticleDto> {
             log.error(String.valueOf(e));
         }
     }
+
+    /**
+     * 如果需要大量的异步操作，可以重载修改notify和register
+     */
+//    @Override
+//    public void notify(ArticleDto articleDto) {
+//        loop.notify(selectorKey(), Event.wrap(articleDto));
+//    }
+//
+//    @Override
+//    protected void register() throws Exception {
+//        loop.on(selector(), this);
+//    }
 }
